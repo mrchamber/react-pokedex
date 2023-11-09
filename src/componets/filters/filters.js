@@ -68,8 +68,7 @@ export default function Filters() {
     }
 
     return (
-        <div>
-            <div className="filter_container">
+        <div className="filter_container">
                 <div class="filter_items">
                     <label>Region</label>
                     <br />
@@ -100,6 +99,5 @@ export default function Filters() {
                     <input className="filter_input" type="text" placeholder="Search Pokemon" onChange={handleSearchChange} />
                 </div>
             </div>
-        </div >
     );
 }

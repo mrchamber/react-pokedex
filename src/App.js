@@ -1,18 +1,19 @@
-import React, {useState, useEffect} from 'react';
 import Header from './componets/header/header';
-import Filters from './componets/filters/filters';
 import PokemonList from './componets/pokemon/pokemonList';
-import axios from 'axios';
-import './app.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import '../src/App.css';
+import PokemonDetails from './componets/pokemon/pokemonDetails';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <Header />
-      <Filters />
-      <PokemonList />
+      <Router>
+        <Header />
+        <Routes>
+          <Route exact path="/" Component={PokemonList} />
+          <Route exact path="/pokemon/:id" Component={PokemonDetails}/>
+        </Routes>
+      </Router>
     </div>
-  );
+  )
 }
-
-export default App;

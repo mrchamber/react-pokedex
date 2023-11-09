@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
     /*background-image: url(../public/pics/bg.jpg);*/
     font-family: 'Press Start 2P', cursive;
@@ -5,7 +9,5 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-div{
-    display: block;
+    margin: 0;
 }

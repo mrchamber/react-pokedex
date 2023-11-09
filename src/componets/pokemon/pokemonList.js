@@ -1,9 +1,14 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import {POKEMON_API_URL, POKEMON_IMG_URL} from '../../config'
+import Filters from '../filters/filters';
+import PokemonCard from '../pokemon/pokemonCard';
+import '../pokemon/pokemonList.css'
+import { CircularProgress } from '@material-ui/core';
+
 export default function PokemonList() {
 
-    const [pokemonData, setpokemonData] = useState()
+    const [pokemonData, setpokemonData] = useState(null)
   useEffect(() =>{
     axios.get(POKEMON_API_URL).then((response) => {
         if(response.status >=200 && response.status < 300) {
@@ -14,7 +19,8 @@ export default function PokemonList() {
                 let pokemonObject = {
                     url: POKEMON_IMG_URL + index +".png",
                     id: index,
-                    name: pokemon.name
+                    name: pokemon.name,
+                    generation: pokemon.generation
                 }
                 newPokemonData.push(pokemonObject);
             });
@@ -24,10 +30,13 @@ export default function PokemonList() {
   }, [])
 
   return (
-    <div>
+    <div className='poke-container'>
+        <Filters />
         {pokemonData ? pokemonData.map((pokemon) => {
-            return <h1>{pokemon.name}</h1>
-        }): <br />}
+                return (
+                    <PokemonCard pokemon={pokemon} image={pokemon.url} key={pokemon.id}/>
+                )
+            }): <CircularProgress />}
     </div>
   );
 }
