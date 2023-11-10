@@ -1,6 +1,7 @@
 import React from 'react'
 import '../pokemon/pokemonCard.css'
 import { Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 const colors = {
     generation1: "linear-gradient(145deg, " + '#1111ff' + ", " + '#ff1111' + ", " + '#ffd733' + ")",
@@ -17,12 +18,11 @@ const colors = {
 }
 
 export default function PokemonCard(props) {
-    const { pokemon, image } = props;
+    const { pokemon, image} = props;
     const { id, name } = pokemon;
-    console.log(props);
     return (
         <div className='pokemon' style={{ background: colors[pokemon.generation]}}>
-            <Link to={"/pokemon/" + id} style={{textDecoration: 'none'}}>
+            <Link to={{pathname: "/pokemon/" + id, style: {id, name} }} style={{textDecoration: 'none'}}>
                 <div className='card'>
                     <div className='img-con'>
                         <img src={image} alt='some pokemon' className='poke' />

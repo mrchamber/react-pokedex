@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import {POKEMON_API_URL, POKEMON_IMG_URL} from '../../config'
-import Filters from '../filters/filters';
+import {POKEMON_API_URL, POKEMON_IMG_URL} from '../../config';
 import PokemonCard from '../pokemon/pokemonCard';
 import '../pokemon/pokemonList.css'
 import { CircularProgress } from '@material-ui/core';
@@ -31,7 +30,6 @@ export default function PokemonList() {
 
   return (
     <div className='poke-container'>
-        <Filters />
         {pokemonData ? pokemonData.map((pokemon) => {
                 return (
                     <PokemonCard pokemon={pokemon} image={pokemon.url} key={pokemon.id}/>
