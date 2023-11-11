@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
+.poke_card{
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.poke-card-body, #poke-card-body{
+    background: red;
+    color: black;
+    font-family: 'Graduate', cursive;
+    border-radius: 10px;
+    height: 800px;
+    width: 1100px;
+    margin-top: 2.0em;
+    margin-bottom: 2.0em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-color: black;
+}
+.left-side{
+    background-color: hsla(0,0%,100%,.25098039215686274);
+    align-items: center;
+    border-radius: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
+    height: 47.5em;
+    width: 32.5em;
+}
+.right-side{
+    background-color: hsla(0,0%,100%,.25098039215686274);
+    align-items: center;
+    border-radius: 10px;
+    margin-right: 2em;
+    height: 47.5em;
+    width: 62.5em;
+    text-align: left;
+}
+.card-name{
+    font-family: 'Graduate', cursive;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.card-title {
+    font-family: 'Graduate', cursive;
+    font-size: 2em;
+    text-align: center;
+}
+
+.card-img{
+    width: 300px;
+    height: 300px;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.num{
+    align-items: center;
+    padding-top: 20px;
+}
+.tile-card:hover{
+    cursor: pointer;
+}
+.section-header{
+    font-size: 24px;
+    margin-left: 20px;
+}
+.ability-container, .bs-container, .enrty-container, .evo-container {
+    margin-left: 30px;
+    margin-right: 20px;
+    background: hsl(0,0%,100%,0.5);
+    border-radius: 10px;
+}
+
+.enrty-container{
+    width: 40em;
+    height: 90px;
+    padding: 2px;
+    padding-left: 10px;
+}
+
+.ability-container{
+    width: 40em;
+    height: 50px;
+    padding: 15px;
+}
+
+.ability-info{
+    margin: auto;
+}
+
+.bs-container{
+    width: 40em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-gap: 0 15px;
+    gap: 0 40px;
+    align-items: center;
+    padding: 10px;
+    border-radius: 1rem;
+    height: 150px;
+    align-content: space-evenly;
+    text-align: center;
+}
+
+.stat-name, .stat-val{
+    text-align: center;
+    padding-left: 50px;
+}
+
+.stat-name{
+    text-transform: uppercase;
+    color: red;
+    font-family: 'Press Start 2P', cursive;
+}
+.stat-columns{
+    width: 135px;
+    margin-right: 0;
+}
+.stat-val{
+    padding-top: 5px;
+}
+.stat-name{
+    font-size: 12px;
+}
