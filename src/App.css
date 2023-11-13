@@ -4,7 +4,7 @@
 }
 
 body{
-    /*background-image: url(../public/pics/bg.jpg);*/
+    background-color: coral;
     font-family: 'Press Start 2P', cursive;
     display: flex;
     flex-direction: column;

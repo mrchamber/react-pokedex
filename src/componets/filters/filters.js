@@ -69,7 +69,7 @@ export default function Filters() {
 
     return (
         <div className="filter_container">
-                <div class="filter_items">
+                <div className="filter_items">
                     <label>Region</label>
                     <br />
                     <select onChange={handleRegionChange} className="filter_input">
@@ -77,7 +77,7 @@ export default function Filters() {
                         {regions.map((region) => <option value={region.value}>{region.label}</option>)}
                     </select>
                 </div>
-                <div class="filter_items">
+                <div className="filter_items">
                     <label>Type</label>
                     <br />
                     <select onChange={handleTypeChange} className="filter_input">
@@ -85,7 +85,7 @@ export default function Filters() {
                         {types.map((type) => <option value={type.value}>{type.label}</option>)}
                     </select>
                 </div>
-                <div class="filter_items">
+                <div className="filter_items">
                     <label>Sort By</label>
                     <br />
                     <select onChange={handleSortChange} className="filter_input">
@@ -93,7 +93,7 @@ export default function Filters() {
                         {sorts.map((sort) => <option value={sort.value}>{sort.label}</option>)}
                     </select>
                 </div>
-                <div class="filter_items">
+                <div className="filter_items">
                     <label>Search</label>
                     <br />
                     <input className="filter_input" type="text" placeholder="Search Pokemon" onChange={handleSearchChange} />

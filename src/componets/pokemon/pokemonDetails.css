@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&family');
+
 .poke_card{
     margin-top: 0;
     display: flex;
@@ -41,13 +43,13 @@
 }
 .card-name{
     font-family: 'Graduate', cursive;
-    font-size: 2.5em;
+    font-size: 2em;
     text-align: center;
 }
 
 .card-title {
     font-family: 'Graduate', cursive;
-    font-size: 2em;
+    font-size: 1.8em;
     text-align: center;
 }
 
@@ -56,7 +58,20 @@
     height: 300px;
     align-items: center;
     padding-bottom: 20px;
+    animation: updown 1s ease infinite;
 }
+
+@keyframes updown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
 
 .num{
     align-items: center;
@@ -64,6 +79,9 @@
 }
 .tile-card:hover{
     cursor: pointer;
+}
+.poke-height{
+    font-size: 20px;
 }
 .section-header{
     font-size: 24px;
@@ -77,10 +95,41 @@
 }
 
 .enrty-container{
+    justify-content: center;
     width: 40em;
     height: 90px;
     padding: 2px;
     padding-left: 10px;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.enrty-info{
+    font-size: 1em;
+    width: 30em;
+    text-align: center;
+    height: 10px;
+    font-family: 'Russo One', sans-serif;
+    font-weight: 500;
+}
+
+.button{
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+.button:focus{
+    outline: 0;
+}
+
+.arrowButton{
+    transform: scaleX(-1);
+    margin-left: 0px;
 }
 
 .ability-container{
@@ -127,4 +176,53 @@
 }
 .stat-name{
     font-size: 12px;
+}
+
+.evo-container {
+    justify-content: center;
+    width: 40em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-gap: 0 15px;
+    gap: 0 40px;
+    align-items: center;
+    padding: 10px;
+    border-radius: 1rem;
+    height: 180px;
+    align-content: space-evenly;
+    text-align: center;
+}
+
+.form-container {
+    width: 160px;
+    height: 150px;
+    margin: 10px;
+    padding-top: 15px;
+    display: flex;
+}
+
+.evo-img {
+    width: 160px;
+    height: 140px;
+    margin: 0 10px;
+}
+
+.arrow {
+    width: 60px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+div.evoNext {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 120px;
+}
+.caption {
+    display: block;
+    margin-top: 0;
 }
