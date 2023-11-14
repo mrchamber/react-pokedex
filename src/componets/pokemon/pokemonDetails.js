@@ -69,6 +69,16 @@ class pokemonDetails extends Component {
 
 
             let evo = [];
+            if (Object.keys(pokemon.evolution).length === 4) {
+                evo.push(<><div className='form-containerEvo4'><img src={POKEMON_IMG_URL + evolution.E1.img + '.png'} className="Evo4"/> <div className="evoNext"><br /><br />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Ic_keyboard_arrow_right_48px.svg/48px-Ic_keyboard_arrow_right_48px.svg.png?20141023120053" className="arrow" />
+                <span className="caption">{evolution.E1.way}</span></div></div><div className="form-containerEvo4"><img src={POKEMON_IMG_URL + evolution.E2.img + ".png"} className="Evo4" /><div className="evoNext">
+                <br /><br /><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Ic_keyboard_arrow_right_48px.svg/48px-Ic_keyboard_arrow_right_48px.svg.png?20141023120053" className="arrow" />
+                <span className="caption">{evolution.E2.way}</span></div></div><div className="form-containerEvo4"><img src={POKEMON_IMG_URL + evolution.E3.img + ".png"} className="Evo4" /><div className="evoNext"><br /><br />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Ic_keyboard_arrow_right_48px.svg/48px-Ic_keyboard_arrow_right_48px.svg.png?20141023120053" className="arrow" />
+                <span className="caption">{evolution.E3.way}</span></div></div>
+                <div className="form-containerEvo4"><img src={POKEMON_IMG_URL + evolution.E4.img + ".png"} className="Evo4" /></div></>);
+            }
             if (Object.keys(pokemon.evolution).length === 3) {
                 evo.push(<><div className='form-container'><img src={POKEMON_IMG_URL + evolution.E1.img + '.png'} className='evo-img'/> <div className="evoNext"><br /><br />
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Ic_keyboard_arrow_right_48px.svg/48px-Ic_keyboard_arrow_right_48px.svg.png?20141023120053" className="arrow" />

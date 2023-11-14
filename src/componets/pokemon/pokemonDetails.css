@@ -202,9 +202,23 @@
     display: flex;
 }
 
+.form-containerEvo4{
+    width: 100px;
+    height: 125px;
+    margin: 10px;
+    padding-top: 15px;
+    display: flex;
+}
+
 .evo-img {
     width: 160px;
     height: 140px;
+    margin: 0 10px;
+}
+
+.Evo4{
+    width: 100px;
+    height: 100px;
     margin: 0 10px;
 }
 
@@ -225,4 +239,5 @@ div.evoNext {
 .caption {
     display: block;
     margin-top: 0;
+    font-size: 1.3vh;
 }
